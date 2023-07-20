@@ -1,19 +1,13 @@
-﻿namespace Book.API.Repositories;
+﻿using Book.API.Entities;
+using Book.API.Exceptions;
+
+namespace Book.API.Repositories;
 
 public interface IAuthorRepository
 {
+    Task AddAuthor(Author author);
+    Task<Author?> GetAuthorById(Guid authorId);
+    Task DeleteAuthorById(Guid authorId);
+    Task<List<Author>> GetAuthors();
+    
 }
-
-public class AuthorRepository : IAuthorRepository
-{
-
-}
-
-
-/*
-    GET Authors
-    POST Authors    
-    GET Authors/{authorId}
-    PUT Authors/{authorId}
-    DELETE Authors/{authorId}
-*/

@@ -8,7 +8,6 @@ public class AuthorModel
     public string Firstname { get; set; }
     public string Lastname { get; set; }
     public string Username { get; set; }
-    public string Password { get; set; }
     public virtual List<BookAuthorModel> AuthorBooks { get; set; }
     public virtual List<CommentModel> Comments { get; set; }
 }
